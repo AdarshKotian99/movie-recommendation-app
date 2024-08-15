@@ -1,1 +1,51 @@
-<p>homepage works!</p>
+
+<body>
+    <div class="tc" >
+       <h2><b>Home page</b></h2>
+      
+  </div>
+  
+  <div class="row" >
+    <div class="col md-1" >
+      <div class="tc1" >
+        <a  routerLink="/YourRecommendations" routerLinkActive="active" href="" style=" color: #E1AC00; text-decoration: none;">
+          <span>Your Recommendations</span>  <span style="font-size: 60px; margin-top: 5px;">&#x261B;</span> 
+        </a>
+        
+      </div>
+      </div>
+  </div>
+  
+  <div class="row row-cols-1 row-cols-md-6 g-4" >
+  
+    <div class="col" *ngFor="let movie of Movies">
+      <div class="card h-100">
+        <img src='{{ "../../assets/" + movie.title + ".jpg" }}' class="card-img-top" alt="john wick" height="250">
+        <div class="card-body">
+          <h5 class="card-title">{{movie.title}}</h5>
+          <p class="card-text">{{movie.descr}}</p>
+          <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+            
+          </div>
+        </div>
+        <div class="card-footer">
+          <form (ngSubmit)="rateMovie(rateForm, movie.id)" #rateForm="ngForm">
+            <input type="radio" class="buttonstyle" name="rating" ngModel value="1" /> 1
+            <input type="radio" class="buttonstyle" name="rating" ngModel value="2" /> 2
+            <input type="radio" class="buttonstyle" name="rating" ngModel value="3" /> 3 
+            <input type="radio" class="buttonstyle" name="rating" ngModel value="4" /> 4
+            <input type="radio" class="buttonstyle" name="rating" ngModel value="5" /> 5
+  
+            <div style="margin-left: 65px; margin-top:3px;">
+              <button type="submit" class="btn btn-success" [disabled]="!rateForm.form.valid">RATE</button>
+            </div>
+            
+  
+          </form>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  </body>
+  
