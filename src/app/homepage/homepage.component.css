@@ -1,0 +1,30 @@
+body {
+    background-color: #283747;
+  }
+  .tc
+  {
+    text-align:center;
+    font-family: 'Hammersmith One', sans-serif;
+    font-size:3em;
+    letter-spacing:0.5em;
+    color: #E1AC00;
+     margin-bottom:30px;
+      /* margin-top: 50px;  */
+  }
+  
+  .tc1
+  {
+    text-align:center;
+    font-family: 'Hammersmith One', sans-serif;
+    font-size:35px;
+    color: #E1AC00;
+    float: right;
+    margin-right: 20px;
+    margin-bottom:40px;
+    
+  }
+
+  .buttonstyle
+  {
+   margin-left: 7px;
+  }

@@ -6,6 +6,7 @@ const routes: Routes = [
   {path:'home',loadChildren : () => import('./homepage/homepage.module').then(m => m.HomepageModule)},
   {path:'login',component:LoginComponent},
   {path:'',redirectTo:'/login',pathMatch:'full'},
+  { path: 'YourRecommendations', loadChildren: () => import('./recommendation/recommendation.module').then(m => m.RecommendationModule) },
   
 ];
 
