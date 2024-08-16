@@ -13,7 +13,7 @@ export class HomepageComponent implements OnInit {
 
   
   constructor(private recommendService : RecommendService) { 
-  //constructor(){  
+  //remove this block
   this.Movies = [
       {
         id: 1,
@@ -24,17 +24,16 @@ export class HomepageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('inside init');
-    // this.recommendService.getMovies().subscribe(result => {
-    //   console.log('hi');
-    //   this.Movies = result;
-    // });
+    this.recommendService.getMovies().subscribe(result => {
+      console.log('hi');
+      this.Movies = result;
+    });
   }
 
   rateMovie(formData : NgForm, movieId : number){
-    // if(formData?.value?.rating && movieId){
-    //   this.recommendService.rateMovies(movieId, formData.value.rating);
-    // }
+    if(formData?.value?.rating && movieId){
+      this.recommendService.rateMovies(movieId, formData.value.rating);
+    }
   }
 
 }
