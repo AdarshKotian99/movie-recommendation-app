@@ -1,0 +1,18 @@
+
+<body>
+    <div class="tc" >
+       <h2><b>Recommended Movies</b></h2>     
+ </div> 
+<div class="row row-cols-1 row-cols-md-6 g-4" >  
+    <div class="col" *ngFor = "let movie of Movies">
+    <div class="card h-100">
+      <img src= '{{ "../../assets/" + movie.title + ".jpg" }}'  class="card-img-top" alt="john wick"  height="250">
+      <div class="card-body">
+        <h5 class="card-title">{{movie.title}}</h5>
+        <p class="card-text">{{movie.descr}} </p>
+      
+      </div>
+    </div>
+  </div>    
+</div>
+</body>
